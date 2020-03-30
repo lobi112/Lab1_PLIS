@@ -1,0 +1,125 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Feb 28 14:00:29 2020
+# Process ID: 6700
+# Current directory: C:/Users/8171268/Desktop/lab1/tmp
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6948 C:\Users\8171268\Desktop\lab1\tmp\lab1.xpr
+# Log file: C:/Users/8171268/Desktop/lab1/tmp/vivado.log
+# Journal file: C:/Users/8171268/Desktop/lab1/tmp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/8171268/Desktop/lab1/tmp/lab1.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top hex_test [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/8171268/Desktop/lab1/tmp/lab1.runs/impl_1/hex_test.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/8171268/Desktop/lab1/tmp/lab1.runs/impl_1/hex_test.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/8171268/Desktop/lab1/tmp/lab1.runs/impl_1/hex_test.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/8171268/Desktop/lab1/tmp/lab1.runs/impl_1/hex_test.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_simulation
+source hex_test_tb.tcl
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/8171268/Desktop/lab1/tmp/lab1.runs/impl_1/hex_test.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/8171268/Desktop/lab1/tmp/lab1.runs/impl_1/hex_test.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/8171268/Desktop/lab1/tmp/lab1.runs/impl_1/hex_test.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_sim
+launch_simulation
+source hex_test_tb.tcl
+remove_forces { {/hex_test_tb/sw[15]} {/hex_test_tb/sw[14]} {/hex_test_tb/sw[13]} {/hex_test_tb/sw[12]} {/hex_test_tb/sw[11]} {/hex_test_tb/sw[10]} }
+remove_forces { {/hex_test_tb/sw[3]} {/hex_test_tb/sw[2]} {/hex_test_tb/sw[1]} {/hex_test_tb/sw[0]} }
+close_sim
+launch_simulation
+source hex_test_tb.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source hex_test_tb.tcl
+run 10 us
+run 10 us
+run 10 us
+close_sim
+launch_simulation
+source hex_test_tb.tcl
+run all
+close_sim
+launch_simulation
+source hex_test_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source hex_test_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source hex_test_tb.tcl
+close_sim
+launch_simulation
+source hex_test_tb.tcl
